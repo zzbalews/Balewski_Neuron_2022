@@ -21,7 +21,6 @@ subject = 'George';
 experiment = 'decoding_CN+OFC';
 session_date = '02-11-2021';
 session_num = 'George00_rec18';
-  
 
 % align to trial events: cut times
 pics_range = [-2000,2000]; % ms range around picture onset
