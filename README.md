@@ -5,13 +5,13 @@ Code for Balewski et al. (2022) Neuron
 ## Data availability
 Any data, code, and additional information supporting this work are available from the lead contact, Joni Wallis, on request.
 
-Raw data for each session:
+#### Raw data for each session:
 - anatomical coordinates for recording sites
 - behavioral data (MonkeyLogic: *.bhv2)
 - spike times and waveforms (40 kHz, Plexon: *.pl2)
 - LFP (1 kHz, Plexon: *.pl2)
 
-Data after preprocessing (all *.mat):
+#### Data after preprocessing (all *.mat):
 - reformatted behavioral data
 - spike times, aligned to task events (200ms, 100ms, and 20ms boxcar smoothing)
 - bandpass filtered LFP magnitudes, aligned to task events (200ms, 100ms, and 20ms boxcar smoothing)
