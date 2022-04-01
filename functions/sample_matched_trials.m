@@ -1,4 +1,4 @@
-function output = sample_matched_trials(bhvdata,keep_tr,niters,ifshow)
+function output = sample_matched_trials(bhvdata,keep_tr,niters,ifshow, which_split)
 %%
 
 if ifshow
@@ -19,18 +19,21 @@ for s = 1:length(subject_names)
         bhvdata.lever~=0 & ~isnan(bhvdata.saccloc(:,1)) & ...
         keep_tr;
     
+    if strcmp(which_split,'whichsacc')
     % split by 1st saccade
     tr_match = find(tr_subj & bhvdata.lever==bhvdata.saccloc(:,1)); % trial#
     tr_mis = find(tr_subj & -bhvdata.lever==bhvdata.saccloc(:,1));% trial#
     
-% %     % split by first CdN state = chosen vs not
-% %     tr_match = find(tr_subj & bhvdata.first_CdN_chosen==1); % trial#
-% %     tr_mis = find(tr_subj & ~bhvdata.first_CdN_chosen==1);% trial#
-% %     
-% %     % split by fist OFC state = chosen vs unchosen
-% %     tr_match = find(tr_subj & bhvdata.first_OFC==1); % trial#
-% %     tr_mis = find(tr_subj & bhvdata.first_OFC==-1);% trial#
-
+    elseif strcmp(which_split,'which1stCNdir')
+    % split by first CdN state = chosen vs not
+    tr_match = find(tr_subj & bhvdata.first_CdN_chosen==1); % trial#
+    tr_mis = find(tr_subj & ~bhvdata.first_CdN_chosen==1);% trial#
+    
+    elseif strcmp(which_split,'which1stOFCval')
+    % split by fist OFC state = chosen vs unchosen
+    tr_match = find(tr_subj & bhvdata.first_OFC==1); % trial#
+    tr_mis = find(tr_subj & bhvdata.first_OFC==-1);% trial#
+    end
     disp(['#match=',num2str(length(tr_match))])
     disp(['#mis=',num2str(length(tr_mis))])
     
