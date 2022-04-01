@@ -2,7 +2,7 @@
 Code for Balewski et al. (2022) Neuron
 
 
-## Data availability
+## Data
 Any data, code, and additional information supporting this work are available from the lead contact, Joni Wallis, on request.
 
 #### Raw data for each session: (default: expect in `data_raw`)
