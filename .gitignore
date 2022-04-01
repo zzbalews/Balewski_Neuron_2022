@@ -2,6 +2,8 @@
 data_raw/
 data_processed/
 data_temp/
+output_decoding/
+output_regressions/
 
 # Windows default autosave extension
 *.asv

@@ -12,9 +12,9 @@ addpath functions/'Matlab Offline Files SDK'/
 channelmap = '../info/George_channel_source.csv'; % recording location for each channel
 transform = '../info/George_gridcoord_transforms.mat';
 
-data_dir = '../data_raw';
-pl2_temp = '../data_temp';
-out_dir = '../data_processed';
+data_dir = '../data_raw'; % where to find raw neural pl2 data
+pl2_temp = '../data_temp'; % where to find mid processing neural data
+out_dir = '../data_processed'; % where to save unit locations
 
 % edit these for specific session
 subject = 'George';
