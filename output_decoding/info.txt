@@ -1,0 +1,2 @@
+Output from OFC and caudate value decoding (from process05_decode_value.m).
+Output from caudate direction decoding (from process06_decode_direction.m).

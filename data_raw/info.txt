@@ -1,0 +1,11 @@
+Expecting raw data for one session here:
+
+1. behavioral data from MonkeyLogic (*.bhv or *.bhv2); could be multiple files if needed to restart task during recording
+	e.g.: amntprob4x4_George_2021-02-11.bhv2
+2. probe coordinates (*.csv)
+	e.g.: George00_rec18_02112021_elec_info_clean.csv
+3. spike times and waveforms (sampled 40 kHz, *.pl2); could be multiple files
+	e.g.: George00_rec18_02112021-units.pl2
+4. LFP (sampled 1 kHz, *.pl2) 
+	e.g.: George00_rec18_0211_2021-LFP.pl2
+

@@ -1,0 +1,5 @@
+Outputs from converting raw data into useable .mat formats:
+
+1. clean behavior (from process01_bhv.m)
+2. firing rates and bandpassed LFP magnitudes; aligned to task events and smooted with useful boxcars (from process02_neural.m)
+3. (ML,AP,DV) coordinates for each contact (from process03_unitlocations.m)

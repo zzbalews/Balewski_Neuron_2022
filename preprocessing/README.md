@@ -9,7 +9,7 @@ Run scripts in order (01 --> 06) for each session. By default, scripts expect al
 - spike times and waveforms (sampled 40 kHz, *.pl2); could be multiple files
 	- e.g.: George00_rec18_02112021-units.pl2
 - LFP (sampled 1 kHz, *.pl2)
-	-e.g.: George00_rec18_0211_2021-LFP.pl2
+	- e.g.: George00_rec18_0211_2021-LFP.pl2
 
 
 #### Convert raw data into useable .mat formats
