@@ -5,24 +5,32 @@ Code for Balewski et al. (2022) Neuron
 ## Data
 Any data, code, and additional information supporting this work are available from the lead contact, Joni Wallis, on request.
 
-#### Raw data for each session: (default: expect in `data_raw`)
-- probe coordinates
-- behavioral data (MonkeyLogic: *.bhv2)
-- spike times and waveforms (40 kHz, Plexon: *.pl2)
-- LFP (1 kHz, Plexon: *.pl2)
-
-#### Data after preprocessing (all *.mat): (default: expect in `data_processed`)
-- reformatted behavioral data
-- spike times, aligned to task events (200ms, 100ms, and 20ms boxcar smoothing)
-- bandpass filtered LFP magnitudes, aligned to task events (200ms, 100ms, and 20ms boxcar smoothing)
-
-#### Single unit regressions and population decoding output (default: expect in `output_regressions` and `output_decoding`)
-- single unit regression outputs
-- value decoding (free trials only): decoding strength (% change from baseline posterior probability) and states for chosen, unchosen, and unavailable values
-- direction decoding (free trials only): decoding strength (posterior probability) and staets for chosen and unchosen direction
-
 #### Expected data directory structure from server
-More info here.
+```
+.
+├── [subject]
+|   ├── OFC+CN
+|   |   ├── [session ID]
+|   |   |   ├── raw
+|   |   |   |   ├── *.bhv or *.bhv2: raw behavioral data
+|   |   |   |   ├── *elec_info_clean.csv: probe coordinate info
+|   |   |   |   ├── *sorting_notes.xlsx: spike sorting notes
+|   |   |   |   ├── *units.pl2: spike times and waveforms (40 kHz)
+|   |   |   |   ├── *LFP.pl2: LFP (1 kHz)
+|   |   |   |   ├── [session ID].pl2: raw pl2 file, including continuous spk channels (only some sessions)
+|   |   |   ├── processed
+|   |   |   |   ├── [bhv file]_clean.mat: processed trial info and timestamps
+|   |   |   |   ├── *unit_MLAPDVloc.mat: contact coordinates (within subject space)
+|   |   |   |   ├── *boxcar_[smoothing]_[task event]_[region].mat: boxcar smoothed firing rates and bandpassed LFP
+|   |   |   |   ├── *slice_[smoothing]_[task event]_[region].mat: average firing rates and bandpassed LPF in time slice
+|   |   |   ├── output_unit_regressions
+|   |   |   |   ├── *expval_bin_alltrials_[task event]_[region].mat: single neuron regression output
+|   |   |   ├── output_decoding
+|   |   |   |   ├── decoding_direction_[region]_[task event]
+|   |   |   |   |   ├── *free*.mat: decoder output
+|   |   |   |   |   ├── *free*.png: quick visualization of decoder output (only some sessions)
+
+```
 
 ## Code organization
 
@@ -37,6 +45,22 @@ More info here.
  - `figures_decoding`: scripts and functions to make direction and value decoding figures (Fig. 3, 4, 6, 7, S2)
 
 ## To generate paper figures:
-1. Download data (contact Joni Wallis)
-2. To start from raw data: move all raw data for each session to `data_raw` and complete all `preprocessing` steps; move outputs to expected data directory structure
-3. To start from regression and decoding outputs: run scripts in all `figures_*`
+1. Download data: contact Joni Wallis
+2. To process raw data (one session at a time): 
+	- move these files into `data_raw`: (from `raw` on server)
+		1. *.bhv or *.bhv2: raw behavioral data
+		2. *elec_info_clean.csv: probe coordinate info
+		3. *units.pl2: spike times and waveforms (40 kHz)
+		4. *LFP.pl2: LFP (1 kHz)
+	- complete all `preprocessing` steps
+	- move all files from `data_processed`, `output_unit_regressions`, and `output_decoding` to appropriate server location (or same spot in local copy of sever directory structure)
+3. To generate figures (starting from regression and decoding outputs for all sessions):
+	- complete all `figures_behavior` steps
+	- complete all `figures_anatomy` steps
+	- complete all `figures_units` steps
+	- complete all `figures_decoding` steps
+
+
+
+
+
