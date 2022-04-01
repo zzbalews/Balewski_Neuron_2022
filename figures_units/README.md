@@ -5,5 +5,5 @@ Code for Balewski et al. (2022) Neuron
 Expecting synology directory structure to find data.
 
 #### Generate figures
-Run `units01.m`, separately for OFC and caudate neurons.
+Run `units01.m`. Generates both OFC and caudate figures.
 
