@@ -6,7 +6,7 @@
 addpath functions/
 addpath functions/NIfTI_20140122/
 addpath ../functions/
-addpath ../preprocessing/functions/unit/
+addpath ../preprocessing/functions/unit/ %% I think this should be the functions from figures_units
 
 fname_sessions = '../info/recording_sessions.csv';
 
