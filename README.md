@@ -6,7 +6,7 @@ Code for Balewski et al. (2022) Neuron
 Any data, code, and additional information supporting this work are available from the lead contact, Joni Wallis, on request.
 
 #### Raw data for each session: (default: expect in `data_raw`)
-- anatomical coordinates for recording sites
+- probe coordinates
 - behavioral data (MonkeyLogic: *.bhv2)
 - spike times and waveforms (40 kHz, Plexon: *.pl2)
 - LFP (1 kHz, Plexon: *.pl2)

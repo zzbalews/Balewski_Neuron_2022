@@ -25,7 +25,7 @@ for s = 1:nses
     session = strjoin({num,date},'_');
     
     % load session clean bhv file
-    fileloc = fullfile(dir_data,experiment,subject,dir_bhv,session);
+    fileloc = fullfile(dir_data,subject,experiment,dir_bhv,session);
     %     fileloc = dir_bhv;
     date_fancy = [date(5:end),'-',date(1:2),'-',date(3:4)];
     
