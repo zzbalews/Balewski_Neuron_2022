@@ -11,5 +11,4 @@ Expecting to find template MRI: `./brainatlas/atlas_rb.nii.gz`
 Expecting to find coronal svgs (512 files): `./brainatlas/coronal_svg/atlas_rb_*.svg`
 
 #### Generate figures
-Run `anatomy01.m`, separately for OFC and caudate neurons.
-
+Run `anatomy01.m`, separately for OFC and caudate neurons (Fig. 2a, 5a, S1).

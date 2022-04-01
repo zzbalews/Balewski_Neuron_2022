@@ -5,5 +5,4 @@ Code for Balewski et al. (2022) Neuron
 Expecting synology directory structure to find data.
 
 #### Generate figures
-Run `behavior01.m`.
-
+Run `behavior01.m` (Fig. 1).

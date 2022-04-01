@@ -1,4 +1,4 @@
-# Behavior: Fig. 3, 4, 6, 7, S2
+# Value and direction decoding: Fig. 3, 4, 6, 7, S2
 Code for Balewski et al. (2022) Neuron
 
 #### Data
