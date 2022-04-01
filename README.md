@@ -24,7 +24,9 @@ Any data, code, and additional information supporting this work are available fr
 ## Code organization
  - `info`: meta data for each recording session
  - `functions`: general matlab functions, used for all analyses
+ - `data_*`: placeholders for expected data locations (contact Joni for data)
  - `preprocessing`: scripts and functions to convert raw behavior and neural data into useful formats, then do single neuron regressions and decoding; each script runs on a single session (need to update vars at the top for different sessions); produces all outputs necessary to generate paper figures in `figures_*` directories
+ - `output_*`: placeholder for outputs of regressions and decoding completed by preprocessing steps
  - `figures_anatomy`: scripts and functions to make anatomy figures (Fig. 2a, 5a, S1)
  - `figures_behavior`: scripts and functions to make behavioral figures (Fig. 1)
  - `figures_units`: scripts and functions to make single unit regression figures (Fig. 2b-e, 5b-e)
