@@ -17,18 +17,18 @@ Any data, code, and additional information supporting this work are available fr
 |   |   |   |   ├── *sorting_notes.xlsx: spike sorting notes
 |   |   |   |   ├── *units.pl2: spike times and waveforms (40 kHz)
 |   |   |   |   ├── *LFP.pl2: LFP (1 kHz)
-|   |   |   |   ├── [session ID].pl2: raw pl2 file, including continuous spk channels (only some sessions)
+|   |   |   |   └── [session ID].pl2: raw pl2 file, including continuous spk channels (only some sessions)
 |   |   |   ├── processed
 |   |   |   |   ├── [bhv file]_clean.mat: processed trial info and timestamps
 |   |   |   |   ├── *unit_MLAPDVloc.mat: contact coordinates (within subject space)
 |   |   |   |   ├── *boxcar_[smoothing]_[task event]_[region].mat: boxcar smoothed firing rates and bandpassed LFP
-|   |   |   |   ├── *slice_[smoothing]_[task event]_[region].mat: average firing rates and bandpassed LPF in time slice
+|   |   |   |   └── *slice_[smoothing]_[task event]_[region].mat: average firing rates and bandpassed LPF in time slice
 |   |   |   ├── output_unit_regressions
-|   |   |   |   ├── *expval_bin_alltrials_[task event]_[region].mat: single neuron regression output
+|   |   |   |   └── *expval_bin_alltrials_[task event]_[region].mat: single neuron regression output
 |   |   |   ├── output_decoding
 |   |   |   |   ├── decoding_direction_[region]_[task event]
 |   |   |   |   |   ├── *free*.mat: decoder output
-|   |   |   |   |   ├── *free*.png: quick visualization of decoder output (only some sessions)
+|   |   |   |   |   └──  *free*.png: quick visualization of decoder output (only some sessions)
 
 ```
 
@@ -53,7 +53,7 @@ Any data, code, and additional information supporting this work are available fr
 		3. *units.pl2: spike times and waveforms (40 kHz)
 		4. *LFP.pl2: LFP (1 kHz)
 	- complete all `preprocessing` steps
-	- move all files from `data_processed`, `output_unit_regressions`, and `output_decoding` to appropriate server location (or same spot in local copy of sever directory structure)
+	- move all files generated in `data_processed`, `output_unit_regressions`, and `output_decoding` to appropriate server location (or same spot in local copy of sever directory structure)
 3. To generate figures (starting from regression and decoding outputs for all sessions):
 	- complete all `figures_behavior` steps
 	- complete all `figures_anatomy` steps
