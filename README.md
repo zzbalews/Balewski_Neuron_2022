@@ -17,11 +17,15 @@ Any data, code, and additional information supporting this work are available fr
 - bandpass filtered LFP magnitudes, aligned to task events (200ms, 100ms, and 20ms boxcar smoothing)
 
 #### Single unit regressions and population decoding output (default: expect in `output_regressions` and `output_decoding`)
-- single unit regression outputs 
+- single unit regression outputs
 - value decoding (free trials only): decoding strength (% change from baseline posterior probability) and states for chosen, unchosen, and unavailable values
 - direction decoding (free trials only): decoding strength (posterior probability) and staets for chosen and unchosen direction
 
+#### Expected data directory structure from server
+More info here.
+
 ## Code organization
+
  - `info`: meta data for each recording session
  - `functions`: general matlab functions, used for all analyses
  - `data_*`: placeholders for expected data locations (contact Joni for data)
@@ -31,3 +35,8 @@ Any data, code, and additional information supporting this work are available fr
  - `figures_behavior`: scripts and functions to make behavioral figures (Fig. 1)
  - `figures_units`: scripts and functions to make single unit regression figures (Fig. 2b-e, 5b-e)
  - `figures_decoding`: scripts and functions to make direction and value decoding figures (Fig. 3, 4, 6, 7, S2)
+
+## To generate paper figures:
+1. Download data (contact Joni Wallis)
+2. To start from raw data: move all raw data for each session to `data_raw` and complete all `preprocessing` steps; move outputs to expected data directory structure
+3. To start from regression and decoding outputs: run scripts in all `figures_*`
