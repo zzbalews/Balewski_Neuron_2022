@@ -26,7 +26,7 @@ Any data, code, and additional information supporting this work are available fr
 |   |   |   ├── output_unit_regressions
 |   |   |   |   └── *expval_bin_alltrials_[task event]_[region].mat: single neuron regression output
 |   |   |   ├── output_decoding
-|   |   |   |   ├── decoding_direction_[region]_[task event]
+|   |   |   |   ├── decoding_[direction or value]_[region]_[task event]
 |   |   |   |   |   ├── *free*.mat: decoder output
 |   |   |   |   |   └──  *free*.png: quick visualization of decoder output (only some sessions)
 
